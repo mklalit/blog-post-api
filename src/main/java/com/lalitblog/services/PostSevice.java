@@ -7,19 +7,19 @@ import com.lalitblog.payload.PostDto;
 
 public interface PostSevice {
 
-	Post createPost(PostDto postDto,Integer userId,Integer categoryId);
+	PostDto createPost(PostDto postDto,Integer userId,Integer categoryId);
 
-	Post updatePost(PostDto postDto, Integer postId);
+	PostDto updatePost(PostDto postDto, Integer postId);
 
 	void deletPost(Integer postId);
 
-	Post getPostById(Integer postId);
+	PostDto getPostById(Integer postId);
 
-	List<Post> getAllPosts();
+	List<PostDto> getAllPosts();
 
-	List<Post> getPostsByCategory(Integer categoryId);
+	List<PostDto> getPostsByCategory(Integer categoryId);
 
-	List<Post> getPostsByUser(Integer userId);
+	List<PostDto> getPostsByUser(Integer userId);
 
 	List<Post> searchPosts(String searchKey);
 
